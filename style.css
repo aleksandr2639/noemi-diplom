@@ -1193,3 +1193,25 @@
       margin-right: 28px;
     }
   }
+
+  @media (max-width: 640px) {
+    .main-trends,
+    .main-page,
+    .block,
+    .main-page-product {
+      flex-wrap: wrap;
+    }
+
+    .card {
+      width: 100%;
+      margin-right: 0;
+      margin-bottom: 4px;
+    }
+
+    .card:last-child {
+      margin-bottom: 0;
+    }
+
+  
+
+  }
