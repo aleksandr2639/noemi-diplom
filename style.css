@@ -61,7 +61,7 @@
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    padding: 28px 35px 0 35px;
+    padding: 28px 35px 0;
   }
 
   .logo {
@@ -132,7 +132,7 @@
   }
 
   .header-title {
-    width: 700px;
+    max-width: 700px;
     margin: 0 auto;;
     color: white;
     text-transform: uppercase;
@@ -347,14 +347,17 @@
   .sidebar {
     max-width: 270px;
     margin-left: 118px;
+    
   }
 
   .sidebar-posts {
     margin: 61px 0 47px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .sidebar-title {
-    margin: 0 0 39px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -365,13 +368,18 @@
     text-decoration: none;
   }
 
-  .sidebar-title:after {
+  .sidebar-posts-title {
+  margin: 0 0 39px;
+  }
+
+  .sidebar-title::after {
     content: '';
     width: 66px;
     height: 3px;
     background-color: #e1d9bd;
     position: relative;
     bottom: -10px;
+    display: block;
   }
 
   .sidebar-block {
@@ -496,6 +504,12 @@
   .mailing {
     width: 100%;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-mailing-title{
+    margin-bottom: 31px;
   }
 
   .mailing-input {
@@ -539,6 +553,12 @@
   .tags {
     width: 100%;
     margin-bottom: 52px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sidebar-tags-title {
+    margin-bottom: 31px;
   }
 
   .tags-list {
@@ -572,6 +592,10 @@
 
   .list {
     width: 100%;
+  }
+
+  .sidebar-list-title{
+    margin-bottom: 31px;
   }
 
   .list-item {
@@ -619,8 +643,9 @@
   }
     
   .main-product-title {
-    position: relative;
-    align-self: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     margin-top: 56px;
     margin-bottom: 40px;
     text-transform: uppercase;
@@ -637,8 +662,6 @@
     background-color: #b59f5b;
     position: relative;
     bottom: -11px;
-    left: 46px;
-    position: absolute;
   }
 
   .main-page-product {
@@ -1001,7 +1024,7 @@
       display: block;
     }
     .header-title {
-      width: 618px;
+      /*width: 618px;*/
       margin-top: 84px;
       margin-bottom: 114px;
       font-size: 40px;
@@ -1195,6 +1218,53 @@
   }
 
   @media (max-width: 640px) {
+    .header {
+      background-image: url(image/banners/banner-mobile.jpg);
+    }
+
+    .container-header {
+      flex-direction: column-reverse;
+      padding: 30px 16px 0;
+    }
+
+    .logo {
+      width: 270px;
+      align-self: center;
+      margin-top: 163px;
+    }
+
+    .menu-icon {
+      display: block;
+    }
+
+    .menu-icon-item {
+      height: 3px;
+    }
+
+    .icon-one {
+      top: 2px;
+    }
+
+    .icon-two {
+      top: 10px;
+    }
+
+    .icon-three {
+      top: 16px;
+    }
+
+    .navigation-list {
+      display: none;
+    }
+
+    .header-title{
+      margin-top: 30px;
+      margin-bottom: 211px;
+      font-size: 26px;
+      line-height: 36px;
+      padding: 0 9px;
+    }
+
     .main-trends,
     .main-page,
     .block,
@@ -1202,8 +1272,19 @@
       flex-wrap: wrap;
     }
 
+    .main-page-title {
+      margin-top: 39px;
+      margin-bottom: 32px;
+      font-size: 16px;
+    }
+
+    .main-page-title::after {
+      bottom: -7px;
+    }
+
     .card {
       width: 100%;
+      min-height: 230px;
       margin-right: 0;
       margin-bottom: 4px;
     }
@@ -1212,6 +1293,191 @@
       margin-bottom: 0;
     }
 
-  
+    .card-text {
+      padding: 27px 28px 21px 19px;
+      margin: 13px 16px 15px 16px;
+    }
+
+    .card-link {
+      margin-right: 20px;
+    }
+
+    .card-description {
+      margin-top: 5px;
+    }
+
+    .description-link {
+      font-size: 16px;
+    }
+
+    .main-page {
+      padding: 0 16px;
+    }
+
+    .container-main {
+      margin-top: 45px;
+    }
+
+    .block {
+      margin-bottom: 33px;
+    }
+
+    .image {
+      margin-right: 0;
+    }
+
+    .text-item {
+      margin-top: 12px;
+      margin-bottom: 5px;
+    }
+
+    .text-link {
+      padding: 0 18px 0  0;
+    }
+
+    .text-title-text {
+      margin: 0 0 20px 0;
+      line-height: 20px;
+    }
+
+    .text-title {
+      font-size: 16px;
+      line-height: 0;
+    }
+
+    .text-title-sub {
+      margin-bottom: 14px;
+    }
+
+    .time {
+      margin-right: 8px;
+    }
+
+    .desc {
+      font-size: 14px;
+      line-height: 20px;
+      padding-bottom: 23px;
+      border-bottom: 2px solid grey;
+    }
+
+    .desc-sub {
+      font-size: 14px;
+      line-height: 20px;
+      padding-top: 4px;
+      padding-bottom: 21px; 
+      border-bottom: 2px solid grey;
+    }  
+
+    .block:nth-child(3) .desc{
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .sidebar {
+      max-width: 640px;
+      margin-left: 0;
+    }
+
+    .sidebar-block {
+      margin-bottom: 22px;
+      align-self: flex-start;
+    }
+
+    .sidebar-posts {
+      margin: 37px 0 47px 0;
+    }
+
+
+    .sidebar-title {
+      font-size: 16px;
+      align-self: center;
+    }
+
+    .sidebar-posts-title {
+      margin: 0 0 37px;
+    }
+
+    .search-form label {
+      width: 100%;
+    }
+
+    .search-form {
+      margin-bottom: 40px;
+    }
+
+    .sidebar-mailing-title{
+      margin-bottom: 31px;
+    }
+
+    .mailing {
+      margin-bottom: 39px;
+    }
+
+    .sidebar-tags-title {
+      margin-bottom: 31px;
+    }
+
+    .tags-list-item, .tags-list-item-first {
+      margin-right: 5px;
+      margin-bottom: 6px;
+      padding: 4px 14px;
+    }
+
+    .tags-list-link, .tags-list-link-first {
+      font-size: 11px;
+    }
+
+    .tags {
+      margin-bottom: 31px;
+    }
+
+    .list-item-list {
+      padding-bottom: 14px;
+      margin-bottom: 13px;
+    }
+
+    .main-product-title {
+      margin-top: 29px;
+      margin-bottom: 38px;
+      font-size: 16px;
+    }
+
+    .main-page-product {
+      justify-content: center;
+      padding: 0 16px;
+    }
+
+    .shop-card {
+      margin-right: 0;
+      margin-bottom: 23px;
+    }
+    
+    .shop-card:last-child {
+      margin-bottom: 0;
+    }
+
+    .shop-card-body {
+      min-width: 285px;
+      min-width: 0;
+    }
+
+    .shop-card-title {
+      font-size: 17px;
+    }
+
+    .shop-card-description {
+      margin-top: 2px;
+      margin-bottom: 24px;
+    }
+
+    .footer {
+      margin: 42px 16px 45px;
+      min-width: 0px;
+    }
+
+    .icon-wrapper {
+      margin-bottom: 45px;
+    }
+
 
   }
