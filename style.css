@@ -125,12 +125,6 @@
     margin-right: 0px;
   }
 
-  .container-cards {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-  }
-
   .header-title {
     max-width: 700px;
     margin: 0 auto;;
@@ -142,6 +136,12 @@
     margin-bottom: 127px;
     text-align: center;
     line-height: 1.64em;
+  }
+
+  .trends {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
   }
 
   .main-page-title {
@@ -166,7 +166,7 @@
     bottom: -10px;
   }
   
-  .main-trends {
+  .trends-container {
     display: flex;
   }
   
@@ -200,14 +200,14 @@
   }
   
   
-  .card-body {
+  .card-wrapper {
     width: 100%;
     height: 100%;
-    box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #ffffff;
     display: flex;
-    align-items: flex-end;
+    flex-direction: column;
+    justify-content: flex-end;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #ffffff; 
   }
 
   .card-text {
@@ -252,14 +252,14 @@
     color: #b59f5b;
   }
 
-  .main-page {
+  .main {
     max-width: 1170px;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
   }
 
-  .container-main {
+  .main-container {
     margin-top: 63px;
     max-width: 780px;;
   }
@@ -274,8 +274,8 @@
     margin-bottom: 0px;
   }
    
-  .image {
-    max-width: 100%;
+  .block-image {
+    width: 100%;
     margin-right: 30px;
     position: relative;
     z-index: 0;
@@ -296,6 +296,10 @@
     text-transform: uppercase;
   }
 
+  .text-link:hover {
+    text-decoration: underline;
+  }
+
   .text-title-text {
     margin: 0 0 27px 0;  
   }
@@ -309,7 +313,7 @@
     line-height: 1em;
   }
 
-  .text-title-first:hover {
+  .text-title:hover {
     color: #b59f5b;
   }
 
@@ -540,6 +544,7 @@
     color: #ffffff;
     text-transform: uppercase;
     background: #b59f5b;
+    cursor: pointer;
     border: none;
     outline: none;
     -webkit-apperance: none;
@@ -576,6 +581,7 @@
     margin-bottom: 4px;
     border: 3px solid #eeeeee;
     padding: 3px 13px;
+    cursor: pointer;
   }
 
   .tags-list-link, .tags-list-link-first {
@@ -587,6 +593,10 @@
    }
 
   .tags-list-item-first:hover {
+    border: 3px solid #b59f5b;
+  }
+
+  .tags-list-item:hover {
     border: 3px solid #b59f5b;
   }
 
@@ -720,6 +730,10 @@
     text-decoration: none;
     color: #b59f5b;
   }
+
+  .shop-card-description a:hover {
+    text-decoration: underline;
+  }
     
   .shop-price {
      display: flex;
@@ -736,6 +750,11 @@
     font-weight: 700;
     font-family: OpenSans-Regular, sans-serif;
     border: none;
+    cursor: pointer;
+  }
+
+  .shop-price a:hover {
+    background-color: #323232;
   }
     
  .prices {
@@ -1012,7 +1031,6 @@
     background-color: #323232;
   }
 
-
   @media (min-width: 641px) and (max-width: 1200px) {
     .container-header {
       padding: 46px 35px 0 35px;
@@ -1024,7 +1042,6 @@
       display: block;
     }
     .header-title {
-      /*width: 618px;*/
       margin-top: 84px;
       margin-bottom: 114px;
       font-size: 40px;
@@ -1039,7 +1056,7 @@
     .navigation-list {
       display: none;
     }
-    .main-page {
+    .main {
       padding-left: 35px;
       padding-right: 35px;
     }
@@ -1048,20 +1065,19 @@
       margin-bottom: 29px;
       font-size: 18px;
     }
-    .main-trends{
+    .trends-container{
       flex-wrap: wrap;
       gap: 5px;
     }
     .card {
-      width: 49.6%;
+      width: calc(50% - 2.5px);
       min-height: 246px;
       margin-right: 0;
     }
     .card-text {
       padding: 31px 42px 29px 29px;
-      margin: 1px 19px 13px 19px;
+      margin: 7px 19px 13px 19px;
     }
-
     .card-title {
       margin-bottom: 9px;
     }
@@ -1080,7 +1096,6 @@
       margin-bottom: 62px;
       position: relative;
     }
-
     .block::after {
       content: "";
       position: relative;
@@ -1090,8 +1105,7 @@
       top: 19px;
       left: 0;
     }
-    .image {
-      width: 100%;
+    .block-image {
       margin-right: 0;
     }
     .text-item {
@@ -1132,25 +1146,20 @@
       margin-left: 35px;
       margin-right: 35px; 
     }
-
     .main-page-product {
       flex-wrap: wrap;
     }
-
     .shop-card {
       width: calc(50% - 15px);
       margin-right: 0;
       margin-bottom: 25px;
     }
-
     .shop-card:nth-child(1) {
       margin-right: 15px;
     }
-
     .shop-card:nth-child(2) {
       margin-left: 15px;
     }
-   
     .shop-card-body {
       min-width: 200px;
       padding: 49px 19px 28px 19px;
@@ -1169,49 +1178,39 @@
       margin-bottom: 45px;
       min-width: 0;
     }
-
     .icon-wrapper {
       margin-bottom: 45px;
     }
-
     .popup-content {
       padding: 46px 30px 52px;
     }
-
     .popup-close {
       width: 29px;
       height: 22px;
     }
-
     .popup-close:before, .popup-close:after {
       width: 32px;
       height: 4px;
     }
-
     .popup-title {
       font-size: 18px;
     }
-
     .form-group {
       margin-bottom: 33px;
     }
-
     .form-group:nth-child(2) {
       margin-bottom: 30px;
     }
-
     .radio-custom {
       margin-right: 8px;
       width: 22px;
       height: 22px;
       vertical-align: middle;
     }
-
     .radio-custom::before {
       width: 16px;
       height: 16px;
     }
-
     .radio-text:first-of-type {
       margin-right: 28px;
     }
@@ -1221,42 +1220,33 @@
     .header {
       background-image: url(image/banners/banner-mobile.jpg);
     }
-
     .container-header {
       flex-direction: column-reverse;
       padding: 30px 16px 0;
     }
-
     .logo {
       width: 270px;
       align-self: center;
       margin-top: 163px;
     }
-
     .menu-icon {
       display: block;
     }
-
     .menu-icon-item {
       height: 3px;
     }
-
     .icon-one {
       top: 2px;
     }
-
     .icon-two {
-      top: 10px;
+      top: 9px;
     }
-
     .icon-three {
       top: 16px;
     }
-
     .navigation-list {
       display: none;
     }
-
     .header-title{
       margin-top: 30px;
       margin-bottom: 211px;
@@ -1264,220 +1254,198 @@
       line-height: 36px;
       padding: 0 9px;
     }
-
-    .main-trends,
-    .main-page,
+    .trends-container,
+    .main,
     .block,
     .main-page-product {
       flex-wrap: wrap;
     }
-
     .main-page-title {
       margin-top: 39px;
       margin-bottom: 32px;
       font-size: 16px;
     }
-
     .main-page-title::after {
       bottom: -7px;
     }
-
     .card {
       width: 100%;
       min-height: 230px;
       margin-right: 0;
       margin-bottom: 4px;
     }
-
     .card:last-child {
       margin-bottom: 0;
     }
-
     .card-text {
       padding: 27px 28px 21px 19px;
       margin: 13px 16px 15px 16px;
     }
-
     .card-link {
       margin-right: 20px;
     }
-
     .card-description {
       margin-top: 5px;
     }
-
     .description-link {
       font-size: 16px;
     }
-
-    .main-page {
+    .main {
       padding: 0 16px;
     }
-
-    .container-main {
+    .main-container {
       margin-top: 45px;
     }
-
     .block {
-      margin-bottom: 33px;
+      margin-bottom: 55px;
+      position: relative;
     }
-
-    .image {
+    .block::after {
+      content: "";
+      position: relative;
+      width: 100%;
+      background-color: #eeeeee;
+      height: 3px;
+      top: 19px;
+      left: 0;
+    }
+    .block-image {
       margin-right: 0;
     }
-
     .text-item {
       margin-top: 12px;
       margin-bottom: 5px;
     }
-
     .text-link {
       padding: 0 18px 0  0;
     }
-
     .text-title-text {
       margin: 0 0 20px 0;
       line-height: 20px;
     }
-
     .text-title {
       font-size: 16px;
       line-height: 0;
     }
-
     .text-title-sub {
       margin-bottom: 14px;
     }
-
     .time {
       margin-right: 8px;
     }
-
     .desc {
       font-size: 14px;
-      line-height: 20px;
-      padding-bottom: 23px;
-      border-bottom: 2px solid grey;
+      line-height: 20px; 
     }
-
     .desc-sub {
       font-size: 14px;
       line-height: 20px;
-      padding-top: 4px;
-      padding-bottom: 21px; 
-      border-bottom: 2px solid grey;
+      padding-top: 4px;  
     }  
-
-    .block:nth-child(3) .desc{
-      border-bottom: 0;
-      padding-bottom: 0;
-    }
-
     .sidebar {
       max-width: 640px;
       margin-left: 0;
     }
-
     .sidebar-block {
       margin-bottom: 22px;
       align-self: flex-start;
     }
-
     .sidebar-posts {
       margin: 37px 0 47px 0;
     }
-
-
     .sidebar-title {
       font-size: 16px;
       align-self: center;
     }
-
     .sidebar-posts-title {
       margin: 0 0 37px;
     }
-
     .search-form label {
       width: 100%;
     }
-
     .search-form {
       margin-bottom: 40px;
     }
-
     .sidebar-mailing-title{
       margin-bottom: 31px;
     }
-
     .mailing {
       margin-bottom: 39px;
     }
-
     .sidebar-tags-title {
       margin-bottom: 31px;
     }
-
     .tags-list-item, .tags-list-item-first {
       margin-right: 5px;
       margin-bottom: 6px;
       padding: 4px 14px;
     }
-
     .tags-list-link, .tags-list-link-first {
       font-size: 11px;
     }
-
     .tags {
       margin-bottom: 31px;
     }
-
     .list-item-list {
       padding-bottom: 14px;
       margin-bottom: 13px;
     }
-
     .main-product-title {
       margin-top: 29px;
       margin-bottom: 38px;
       font-size: 16px;
     }
-
     .main-page-product {
       justify-content: center;
       padding: 0 16px;
     }
-
     .shop-card {
       margin-right: 0;
       margin-bottom: 23px;
     }
-    
     .shop-card:last-child {
       margin-bottom: 0;
     }
-
     .shop-card-body {
       min-width: 285px;
       min-width: 0;
     }
-
     .shop-card-title {
       font-size: 17px;
     }
-
     .shop-card-description {
       margin-top: 2px;
       margin-bottom: 24px;
     }
-
     .footer {
       margin: 42px 16px 45px;
       min-width: 0px;
     }
-
     .icon-wrapper {
       margin-bottom: 45px;
     }
+  }
 
+  @media (min-width: 641px) and (max-width: 1200px) and (orientation: landscape){
 
+    .trends-container {
+      flex-wrap: nowrap;
+    }
+
+    .card {
+      width: 25%;
+    }
+  }
+
+  @media (max-width: 640px) and (orientation: landscape){
+
+    .trends-container {
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .card {
+      width: calc(50% - 2.5px);
+      margin-bottom: 0;
+    }
   }

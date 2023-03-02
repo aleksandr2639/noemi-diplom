@@ -49,11 +49,11 @@
         <h1 class="header-title">Блог о творчестве, спорте, и образе жизни</h1>
         </div>
     </header>
-    <section class="container-cards">
+    <section class="trends">
       <h2 class="main-page-title">Сейчас в тренде</h2>
-      <div class="main-trends">
+      <div class="trends-container">
         <article class="card card-trend1">
-          <div class="card-body">
+          <div class="card-wrapper">
             <div class="card-text card-text-first">
               <ul class="card-title">
                 <li><a class="card-link" href="#0">Lifestyle</a></li>
@@ -64,7 +64,7 @@
           </div>
         </article>
         <article class="card card-trend2">
-          <div class="card-body">
+          <div class="card-wrapper">
             <div class="card-text">
               <ul class="card-title">
                 <li><a class="card-link" href="#0">Food</a></li>
@@ -74,7 +74,7 @@
           </div>
         </article>
         <article class="card card-trend3">
-          <div class="card-body">
+          <div class="card-wrapper">
             <div class="card-text">
               <ul class="card-title">
                 <li><a class="card-link" href="#0">Lifestyle</a></li>
@@ -85,7 +85,7 @@
           </div>
         </article>
         <article class="card card-trend4">
-          <div class="card-body">
+          <div class="card-wrapper">
             <div class="card-text">
               <ul class="card-title">
                 <li><a class="card-link" href="#0">Food</a></li>
@@ -97,10 +97,10 @@
         </article>
       </div>
     </section>
-    <div class="main-page">
-      <main class="container-main">
+    <div class="main">
+      <main class="main-container">
         <article class="block">
-          <img class="image" src="image/posts/last-post1.jpg" alt="Человек на пляже">
+          <img class="block-image" src="image/posts/last-post1.jpg" alt="Человек на пляже">
           <div class="text">
             <ul class="text-item">
               <li><a class="text-link" href="#0">Travel</a></li>
@@ -119,7 +119,7 @@
           </div>
         </article>
         <article class="block">
-          <img class="image" src="image/posts/last-post2.jpg" alt="Занятие йогой">
+          <img class="block-image" src="image/posts/last-post2.jpg" alt="Занятие йогой">
           <div class="text">
             <ul class="text-item">
               <li><a class="text-link" href="#0">Health</a></li>
@@ -137,7 +137,7 @@
           </div>
         </article>
         <article class="block">
-          <img class="image" src="image/posts/last-post3.jpg" alt="Музыкальный фестиваль">
+          <img class="block-image" src="image/posts/last-post3.jpg" alt="Музыкальный фестиваль">
           <div class="text">
             <ul class="text-item">
               <li><a class="text-link" href="#0">Music</a></li>
@@ -154,7 +154,7 @@
           </div>
         </article>
         <article class="block">
-          <img class="image" src="image/posts/last-post4.jpg" alt="Обед">
+          <img class="block-image" src="image/posts/last-post4.jpg" alt="Обед">
           <div class="text">
             <ul class="text-item">
               <li><a class="text-link" href="#0">Livestyle</a></li>
@@ -172,7 +172,7 @@
           </div>
         </article>
         <article class="block">
-          <img class="image" src="image/posts/last-post5.jpg" alt="Подушка">
+          <img class="block-image" src="image/posts/last-post5.jpg" alt="Подушка">
           <div class="text">
             <ul class="text-item">
               <li><a class="text-link" href="#0">Livestyle</a></li>
@@ -202,7 +202,7 @@
               </div>
             </article >
             <article  class="sidebar-block">
-              <img class="sidebar-image" src="image/posts/7.jpg" alt="Йога для домашних">
+              <img class="sidebar-image" src="image/posts/151.jpg" alt="Йога для домашних">
               <div>
                 <span class="sidebar-time">14 июня 2019</span>
                 <h4 class="sidebar-text"><a class="sidebar-text-link-first" href="#">Йога для домашних</a></h4> 
@@ -216,14 +216,14 @@
               </div>
             </article >
             <article  class="sidebar-block">
-              <img class="sidebar-image" src="image/posts/151.jpg" alt="Кулинарный подход">
+              <img class="sidebar-image" src="image/posts/501.jpg" alt="Кулинарный подход">
               <div>
                 <span class="sidebar-time">14 июня 2019</span>
                 <h4 class="sidebar-text"><a class="sidebar-text-link-first" href="#">Кулинарный подход в науке</a></h4> 
               </div>
             </article>
             <article  class="sidebar-block">
-              <img class="sidebar-image" src="image/posts/501.jpg" alt="Лучшие прически">
+              <img class="sidebar-image" src="image/posts/7.jpg" alt="Лучшие прически">
               <div>
                 <span class="sidebar-time">14 июня 2019</span>
                 <h4 class="sidebar-text"><a class="sidebar-text-link-first" href="#">Лучшие прически для распущенных волос</a></h4> 
@@ -331,8 +331,8 @@
       <div class="main-page-product">
         <article class="shop-card">
           <picture class="shop-card-image">
-            <source class="card-image" media="(max-width: 640px)" srcset="image/shop/shop-item-mobile1.jpg" alt="Подушки на диван" width="500">
-            <source class="card-image" media="(min-width: 641px) and (max-width: 1200px)" srcset="image/shop/shop-item-tablet1.jpg" alt="Подушки на диван" width = '500px'>
+            <source class="card-image" media="(max-width: 640px)" srcset="image/shop/shop-item-mobile1.jpg" alt="Подушки на диван" width="500px">
+            <source class="card-image" media="(min-width: 641px) and (max-width: 1200px)" srcset="image/shop/shop-item-tablet1.jpg" alt="Подушки на диван" width="500px">
             <source class="card-image" media="(min-width: 1201px)" srcset="image/shop/shop-item-desk1.jpg" alt="Подушки на диван" >
             <img class="card-image" src="image/shop/shop-item-desk1.jpg" alt="Подушки на диван">
           </picture>
@@ -350,8 +350,8 @@
         </article>
         <article class="shop-card">
           <picture class="shop-card-image">
-            <source class="card-image" media="(max-width: 640px)" srcset="image/shop/shop-item-mobile2.jpg" alt="Кукла 'Зайчик'" width="500">
-            <source class="card-image" media="(min-width: 641px) and (max-width: 1200px)" srcset="image/shop/shop-item-tablet2.jpg" width = '500px'>
+            <source class="card-image" media="(max-width: 640px)" srcset="image/shop/shop-item-mobile2.jpg" alt="Кукла 'Зайчик'" width="500px">
+            <source class="card-image" media="(min-width: 641px) and (max-width: 1200px)" srcset="image/shop/shop-item-tablet2.jpg" width="500px">
             <source class="card-image" media="(min-width: 1201px)" srcset="image/shop/shop-item-desk2.jpg" alt="Кукла 'Зайчик'">
             <img class="card-image" src="image/shop/shop-item-desk2.jpg" alt="Кукла 'Зайчик'">
           </picture>
@@ -366,8 +366,8 @@
         </article>
         <article class="shop-card">
           <picture class="shop-card-image">
-            <source class="card-image" media="(max-width: 640px)" srcset="image/shop/shop-item-mobile3.jpg" alt="Шестиугольная рамка" width="500">
-            <source class="card-image" media="(min-width: 641px) and (max-width: 1200px)" srcset="image/shop/shop-item-tablet3.jpg" alt="Шестиугольная рамка" width = '500px'>
+            <source class="card-image" media="(max-width: 640px)" srcset="image/shop/shop-item-mobile3.jpg" alt="Шестиугольная рамка" width="500px">
+            <source class="card-image" media="(min-width: 641px) and (max-width: 1200px)" srcset="image/shop/shop-item-tablet3.jpg" alt="Шестиугольная рамка" width="500px">
             <source class="card-image" media="(min-width: 1201px)" srcset="image/shop/shop-item-desk3.jpg" alt="Шестиугольная рамка" >
             <img class="card-image" src="image/shop/shop-item-desk3.jpg" alt="Шестиугольная рамка">
           </picture>
