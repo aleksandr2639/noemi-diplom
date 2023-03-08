@@ -1435,6 +1435,13 @@
     .card {
       width: 25%;
     }
+
+    .card-title {
+      flex-wrap: wrap;
+    }
+    .description-link {
+      font-size: 12px;
+    }
   }
 
   @media (max-width: 640px) and (orientation: landscape){
@@ -1447,12 +1454,5 @@
     .card {
       width: calc(50% - 2.5px);
       margin-bottom: 0;
-    }
-
-    .card-title {
-      flex-wrap: wrap;
-    }
-    .description-link {
-      font-size: 12px;
     }
   }
