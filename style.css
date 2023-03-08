@@ -1335,13 +1335,13 @@
     }
     .desc {
       font-size: 14px;
-      line-height: 20px; 
+      line-height: 20px;
     }
     .desc-sub {
       font-size: 14px;
       line-height: 20px;
-      padding-top: 4px;  
-    }  
+      padding-top: 4px;
+    }
     .sidebar {
       max-width: 640px;
       margin-left: 0;
@@ -1447,5 +1447,12 @@
     .card {
       width: calc(50% - 2.5px);
       margin-bottom: 0;
+    }
+
+    .card-title {
+      flex-wrap: wrap;
+    }
+    .description-link {
+      font-size: 12px;
     }
   }
